@@ -1,8 +1,8 @@
 
   app.controller('LoginController', function($scope, $rootScope, $stateParams, $state, LoginService) {
     
-     $scope.username = 'admin';
-     $scope.password = 'pass';
+     $scope.username = '';
+     $scope.password = '';
 
 
   if(LoginService.isAuthenticated()) {
@@ -57,3 +57,4 @@
     
   }); 
 
+ 
