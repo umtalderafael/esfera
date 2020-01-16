@@ -1,11 +1,11 @@
 # esfera
 Aplicação de teste para Esfera Gestão de Planos de Saúde
 
-
-Desenvolvida utilizando AngularJS
+# tecnologias
+Desenvolvida utilizando AngularJS e Bootstrap 4
 Utilizei o localStorage do navegador para armazenar os usuários
 
-
+# usuario
 Usuário para Login
-usuari: admin
+usuario: admin
 senha: pass
