@@ -1,0 +1,93 @@
+<link rel="stylesheet" type="text/css" href="view/home.css">
+
+<div class="container carregando">
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <a href="" class="intro-banner-vdo-play-btn pinkBg" target="_blank">
+                    <i class="glyphicon glyphicon-play whiteText" aria-hidden="true"></i>
+                    <span class="ripple pinkBg"></span>
+                    <span class="ripple pinkBg"></span>
+                    <span class="ripple pinkBg"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="col-12 listagem" style="margin-top: 120px;" >
+
+	<h4>Home </h4>
+
+	<br/>
+
+    <div class="row" style="margin-bottom: 50px;">
+        <div class="col-sm-12">
+            <div class="main-box no-header clearfix">
+                <div class="main-box-body clearfix">
+                    <div class="table-responsive-sm">
+                        <table class="table table-hover user-list">
+
+                        	 <caption>Lista de usuários</caption>
+
+                            <thead>
+                                <tr>
+                                <th><span>Usuário</span></th>
+                                <th><span>Nascimento</span></th>                                
+                                <th><span>Cidade</span></th>
+                                <th>&nbsp;</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr ng-repeat="usuario in home.usuarios track by $index"> 
+                                    <td>
+                                        <img ng-src="{{usuario.avatar}}" alt="Foto usuário" class="rounded" style="width: 35px;">
+
+                                        <a href="" class="user-link" ng-click="home.editar($index)">{{usuario.nome}} </a>
+                                        
+                                    </td>
+
+                                    <td>{{usuario.nascimento}}</td>                                                                            
+                                    
+                                    <td> {{usuario.endereco.cidade}} - {{usuario.endereco.estado}} </td>
+
+                                    <td style="width: 20%;">
+                                        <a class="table-link" ng-click="home.editar($index)"> 
+                                            <span class="fa-stack">
+                                                <i class="fa fa-square fa-stack-2x"></i>
+                                                <i class="fas fa-user-edit fa-stack-1x fa-inverse"></i>                                                
+                                            </span>
+                                        </a>
+                                        
+                                        <a class="table-link danger" ng-click="home.excluir($index)">
+                                            <span class="fa-stack">
+                                                <i class="fa fa-square fa-stack-2x"></i>
+                                                <i class="fas fa-user-times fa-stack-1x fa-inverse"></i>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+
+<div class="nenhum" style="margin-top: 120px; padding-top: 100px;">
+
+    <center>
+        <h3>Nenhum usuário cadastrado</h3>         
+    </center>
+
+    
+    
+</div>
